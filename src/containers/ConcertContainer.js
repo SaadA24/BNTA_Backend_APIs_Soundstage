@@ -5,29 +5,30 @@ import SearchBar from "../components/SearchBar";
 import Concerts from "../pages/Concerts";
 import HowItWorks from "../pages/HowItWorks";
 
-const ConcertContainer = ({sortedConcerts, searchInput}) => {
-    
-    const [concerts, setConcerts] = useState([]);
-    
-
-    useEffect(() => {
-        fetch("http://localhost:8080/concerts")
-        .then((response) => {return response.json()})
-        .then((data) => {setConcerts(data)});
-    }, [])
-
+// 
+    const ConcertContainer = ({sortedConcerts, searchInput}) => {
         
-    console.log(sortedConcerts)
+        const [concerts, setConcerts] = useState([]);
+        
 
-    return ( 
-        <div>
+        useEffect(() => {
+            fetch("http://localhost:8080/concerts")
+            .then((response) => {return response.json()})
+            .then((data) => {setConcerts(data)});
+        }, [])
+
             
-            <div className="concertList">           
-                 <ConcertList concerts={sortedConcerts === undefined? concerts : sortedConcerts} searchInput={searchInput}/>
-            </div>
+        console.log(sortedConcerts)
 
-        </div>
-    );
-}
+        return ( 
+            <div>
+                
+                <div className="concertList">           
+                    <ConcertList concerts={sortedConcerts === undefined? concerts : sortedConcerts} searchInput={searchInput}/>
+                </div>
+
+            </div>
+        );
+    }
  
 export default ConcertContainer;

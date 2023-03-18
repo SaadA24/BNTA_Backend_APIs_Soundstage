@@ -9,24 +9,26 @@ import HowItWorks from './pages/HowItWorks';
 import Home from './pages/Home';
 
 
-function App() {
-  return (
-  <BrowserRouter>
-    <div className="App">
-    <NavBar/>
-    <Routes>
-      <Route path="/" element={<Home />}/>
-      <Route path="/concerts" element={<Concerts/>}/>
-      <Route path="/HowItWorks" element={<HowItWorks/>}/>
-    </Routes>
-    <Footer/>
-    </div>
+// 
 
-    </BrowserRouter>
+  function App() {
+    return (
+    <BrowserRouter>
+      <div className="App">
+      <NavBar/>
+      <Routes>
+        <Route path="/" element={<Home />}/>
+        <Route path="/concerts" element={<Concerts/>}/>
+        <Route path="/HowItWorks" element={<HowItWorks/>}/>
+      </Routes>
+      <Footer/>
+      </div>
 
-);
-}
+      </BrowserRouter>
+
+  );
+  }
 
 export default App;
 
-// Just testing if this works
+

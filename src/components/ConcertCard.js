@@ -1,27 +1,30 @@
-const ConcertCard = ({concert}) => {
+//     
+    const ConcertCard = ({concert}) => {
     
     const imagesArray = 
     [{"artistName" : "Tupac", "imgUrl" : "/Tupac.jpg"},
-     {"artistName" : "Adele", "imgUrl" : "/Adele.jpg"}, 
-     {"artistName" : "Fleetwood Mac", "imgUrl" : "/FleetwoodMac.jpg"}, 
-     {"artistName" : "Billy Joel", "imgUrl" : "/BillyJoel.jpg"},
-      {"artistName" : "Kendrick Lamar", "imgUrl" : "/KendrickLamar.jpg"},
-       {"artistName" : "Fredo", "imgUrl" : "/Fredo.jpeg"},
-       {"artistName" : "Alestorm", "imgUrl" : "/Alestorm.jpeg"},
-       {"artistName" : "Will's Jamboree", "imgUrl" : "Will.jpg"} ,
-       {"artistName" : "Eminem", "imgUrl" : "Eminem.jpg"},
-       {"artistName" : "Lizzo", "imgUrl" : "/Lizzo.jpg"}, 
+    {"artistName" : "Adele", "imgUrl" : "/Adele.jpg"}, 
+    {"artistName" : "Fleetwood Mac", "imgUrl" : "/FleetwoodMac.jpg"}, 
+    {"artistName" : "Billy Joel", "imgUrl" : "/BillyJoel.jpg"},
+    {"artistName" : "Kendrick Lamar", "imgUrl" : "/KendrickLamar.jpg"},
+    {"artistName" : "Fredo", "imgUrl" : "/Fredo.jpeg"},
+    {"artistName" : "Alestorm", "imgUrl" : "/Alestorm.jpeg"},
+    {"artistName" : "Will's Jamboree", "imgUrl" : "Will.jpg"} ,
+    {"artistName" : "Eminem", "imgUrl" : "Eminem.jpg"},
+    {"artistName" : "Lizzo", "imgUrl" : "/Lizzo.jpg"}, 
     {"artistName" : "Track 2", "imgUrl" : "/TRack2.png"}, 
-{"artistName" : "Saad's Jamboree", "imgUrl" : "/Saad.jpeg"} ]; function grabImage(inputArtist) {
+    {"artistName" : "Saad's Jamboree", "imgUrl" : "/Saad.jpeg"} ]; function grabImage(inputArtist) {
+
+//
 
     let object = imagesArray.find((imgObject)=>{
         if(imgObject.artistName == inputArtist){
             return imgObject
         }
+    }); 
 
     
-    }); 
-      
+//
 
     if (object === undefined){
         object={"imgUrl" : "https://placebear.com/200/200"}
@@ -29,7 +32,7 @@ const ConcertCard = ({concert}) => {
 
     return object.imgUrl;
 
-}
+    }
 
 // {require("../assets/Tupac.jpg")}
     
@@ -45,6 +48,6 @@ const ConcertCard = ({concert}) => {
         <p><b>Location:</b> London</p>
     </div>
     </div> );
-}
+    }
  
 export default ConcertCard;
