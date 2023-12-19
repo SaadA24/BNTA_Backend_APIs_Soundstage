@@ -1,9 +1,3 @@
-<div align="center">
-    <img src=./src/assets/WhiteSoundStageLogo.png alt="SoundStage Team Logo"/>
-    <h1>SoundStage: Getting you straight to the stage</h1>
-</div>
-
-
 ## Project Description
 SoundStage allows users to view a range of concerts fetched from an API. Users can filter concerts by artist name and sort the list of concerts by ticket price and venue capacity. A user can also log in, so long as they have an account existing in the database. 
 
